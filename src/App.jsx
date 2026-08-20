@@ -1,10 +1,10 @@
-
 import axios from "axios";
 import { useEffect, useState } from "react";
 import Navbar from "./Navbar";
 import WeatherForm from "./WeatherForm";
 import Footer from "./Footer";
 import "./App.css";
+
 function App() {
   const [weatherInfo, setWeatherInfo] = useState({
     tempCelcius: 0,
@@ -64,35 +64,68 @@ function App() {
   }
 
   return (
-    <div className="container">
-      <Navbar userName={"Mehmoona"}
-      courseName={"web B18"}/>
-      <WeatherForm/>
-      <Footer/>
-      <h1>🌤 Weather App</h1>
+    <div className="app">
 
-      <form onSubmit={submitWeatherForm}>
-        <input
-          type="text"
-          placeholder="Enter City Name"
-          value={city}
-          onChange={(e) => setCity(e.target.value)}
+      <Navbar />
+
+      <main className="weather-container">
+
+        <h1 className="hero-title">
+          Weather App
+        </h1>
+
+        <p className="hero-description">
+          Check the current weather of any city around the world.
+        </p>
+
+        <WeatherForm
+          city={city}
+          setCity={setCity}
+          submitWeatherForm={submitWeatherForm}
         />
 
-        <button type="submit">Search</button>
-      </form>
+        <div className="weather-card">
 
-      <div className="weather-card">
-        <h1 className="bg-black-900">{weatherInfo.cityName}</h1>
+          <div className="weather-icon">
+            ☀️
+          </div>
 
-        <h2>{weatherInfo.cityName}</h2>
+          <h2 className="city-name">
+            {weatherInfo.cityName}
+          </h2>
 
-        <h3>📍 State: {weatherInfo.state}</h3>
+          <p className="state-name">
+            📍 {weatherInfo.state}
+          </p>
 
-        <h3>🌡 Temperature: {weatherInfo.tempCelcius}°C</h3>
+          <div className="temperature">
+            {weatherInfo.tempCelcius}°C
+          </div>
 
-        <h3>💨 Wind Speed: {weatherInfo.windSpeed} km/h</h3>
-      </div>
+          <div className="weather-details">
+
+            <div className="weather-detail">
+              <span>🌡 Temperature</span>
+              <strong>
+                {weatherInfo.tempCelcius}°C
+              </strong>
+            </div>
+
+            <div className="weather-detail">
+              <span>💨 Wind Speed</span>
+              <strong>
+                {weatherInfo.windSpeed} km/h
+              </strong>
+            </div>
+
+          </div>
+
+        </div>
+
+      </main>
+
+      <Footer />
+
     </div>
   );
 }
