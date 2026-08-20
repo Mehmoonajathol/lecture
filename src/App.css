@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #eaf4ff, #f7fbff);
+  color: #26364a;
+  min-height: 100vh;
+}
+
+.container {
+  min-height: 100vh;
+  padding: 25px 20px;
+  text-align: center;
+}
+
+/* Main Weather Heading */
+.container > h1 {
+  margin: 35px 0 22px;
+  font-size: 32px;
+  color: #2864a8;
+  font-weight: 600;
+}
+
+/* Search Form */
+.container form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin: 20px auto 30px;
+}
+
+.container input {
+  width: 280px;
+  padding: 12px 15px;
+  border: 1px solid #b9cde3;
+  border-radius: 8px;
+  outline: none;
+  font-size: 16px;
+  background-color: #ffffff;
+  color: #26364a;
+}
+
+.container input::placeholder {
+  color: #7b8da1;
+}
+
+.container input:focus {
+  border-color: #5b9bd5;
+  box-shadow: 0 0 6px rgba(91, 155, 213, 0.2);
+}
+
+/* Search Button */
+.container button {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  background-color: #5b9bd5;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.container button:hover {
+  background-color: #407fb8;
+}
+
+/* Weather Card */
+.weather-card {
+  width: 360px;
+  max-width: 90%;
+  margin: 25px auto;
+  padding: 28px 25px;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(60, 90, 120, 0.12);
+  border: 1px solid #e0ebf5;
+}
+
+/* City Name */
+.weather-card h1 {
+  font-size: 28px;
+  color: #2864a8;
+  margin-bottom: 12px;
+}
+
+/* City */
+.weather-card h2 {
+  font-size: 22px;
+  color: #455a70;
+  margin-bottom: 22px;
+}
+
+/* Weather Details */
+.weather-card h3 {
+  font-size: 17px;
+  font-weight: 400;
+  color: #526579;
+  margin: 15px 0;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .container {
+    padding: 20px 12px;
+  }
+
+  .container > h1 {
+    font-size: 27px;
+  }
+
+  .container form {
+    flex-direction: column;
+  }
+
+  .container input {
+    width: 90%;
+  }
+
+  .container button {
+    width: 140px;
+  }
+
+  .weather-card {
+    width: 90%;
+  }
+}
