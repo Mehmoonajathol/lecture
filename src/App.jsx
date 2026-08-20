@@ -4,6 +4,7 @@ import Navbar from "./Navbar";
 import WeatherForm from "./WeatherForm";
 import Footer from "./Footer";
 import "./App.css";
+import "./Navbar.css";
 
 function App() {
   const [weatherInfo, setWeatherInfo] = useState({
@@ -66,9 +67,11 @@ function App() {
   return (
     <div className="app">
 
+      {/* Navbar */}
       <Navbar />
 
-      <main className="weather-container">
+      {/* Weather Section */}
+      <main className="weather-container" id="weather">
 
         <h1 className="hero-title">
           Weather App
@@ -78,12 +81,14 @@ function App() {
           Check the current weather of any city around the world.
         </p>
 
+        {/* Search Form */}
         <WeatherForm
           city={city}
           setCity={setCity}
           submitWeatherForm={submitWeatherForm}
         />
 
+        {/* Weather Card */}
         <div className="weather-card">
 
           <div className="weather-icon">
@@ -106,6 +111,7 @@ function App() {
 
             <div className="weather-detail">
               <span>🌡 Temperature</span>
+
               <strong>
                 {weatherInfo.tempCelcius}°C
               </strong>
@@ -113,6 +119,7 @@ function App() {
 
             <div className="weather-detail">
               <span>💨 Wind Speed</span>
+
               <strong>
                 {weatherInfo.windSpeed} km/h
               </strong>
@@ -124,6 +131,19 @@ function App() {
 
       </main>
 
+      {/* About Section */}
+      <section id="about" className="about-section">
+
+        <h2>About Weatherly</h2>
+
+        <p>
+          Weatherly is a simple and modern weather application
+          that helps you check the current weather of different cities.
+        </p>
+
+      </section>
+
+      {/* Footer */}
       <Footer />
 
     </div>

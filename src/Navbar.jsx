@@ -8,9 +8,17 @@ function Navbar() {
       </div>
 
       <div className="navbar-links">
-        <a href="/" className="active">Home</a>
-        <a href="#weather">Weather</a>
-        <a href="#about">About</a>
+        <a href="/" className="active">
+          Home
+        </a>
+
+        <a href="#weather">
+          Weather
+        </a>
+
+        <a href="#about">
+          About
+        </a>
       </div>
 
       <div className="navbar-status">
