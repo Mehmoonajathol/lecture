@@ -260,3 +260,43 @@ body {
   }
 
 }
+/* About Section */
+.about-section {
+  max-width: 900px;
+  width: 100%;
+  margin: 40px auto;
+  padding: 30px 20px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+.about-section h2 {
+  font-size: 24px;
+  color: #1e40af;
+  margin-bottom: 10px;
+}
+
+.about-section p {
+  color: #64748b;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* Footer Styling */
+.footer {
+  margin-top: auto; /* Footer ko viewport ke bottom par push karega */
+  width: 100%;
+  padding: 24px 20px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.8);
+  border-top: 1px solid #dbeafe;
+  color: #64748b;
+  font-size: 14px;
+}
+
+.footer p {
+  margin: 0;
+}
